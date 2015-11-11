@@ -5,8 +5,11 @@
   This script adds four new functions to the Kate Editor:
 
    **b64encode**:   encodes the select text or all document, if no text is selected, to BASE64
+   
    **b64decode**:   decodes from BASE64 the selected text or all document if no text is selected.
+   
    **b64xmltidy**:  Splits XML tags, one for each line
+   
    **b64wrap80**:   Line wraps at column 80 the selected text or all document if no text is selected.
 
 
