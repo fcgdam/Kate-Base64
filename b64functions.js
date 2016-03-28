@@ -1,3 +1,33 @@
+var katescript = {
+    "author": "Francisco D. <fdsyncmaster@gmail.com>",
+    "license": "LGPLv2+",
+    "revision": 3,
+    "kate-version": "5.1",
+    "functions": ["b64encode", "b64decode", "b64xmltidy", "b64wrap80"], 
+    "actions": [
+        {   "function": "b64encode",
+            "name": "BASE64 encoding",
+            "category": "BASE64",
+            "interactive": "false"
+        },
+        {   "function": "b64decode",
+            "name": "BASE64 decode",
+            "category": "BASE64",
+            "interactive": "false"
+        },
+        {   "function": "b64xmltidy",
+            "name": "XML tidy",
+            "category": "BASE64",
+            "interactive": "false"
+        },
+        {   "function": "b64wrap80",
+            "name": "BASE64 wrap",
+            "category": "BASE64",
+            "interactive": "false"
+        }
+    ]
+}; // kate-script-header, must be at the start of the file without comments
+
 /* kate-script
  * author: Francisco D. <fdsyncmaster@gmail.com>
  * license: GPL
@@ -6,9 +36,7 @@
  * type: commands
  * functions: b64encode, b64decode, b64xmltidy, b64wrap80
  * i18n-catalog: b64endecatalog
- *
  * The version solves the anonymous range function error on Kate recent versions
- * 
  */
 
 // required katepart js libraries
@@ -16,46 +44,43 @@ require ("range.js");
 
 function help(cmd)
 {
-    if (cmd == "b64encode") {
+    if (cmd == 'b64encode') {
         return i18n("Encode the selected text to BASE64.");
     } else
-    if (cmd == "b64decode") {
+    if (cmd == 'b64decode') {
         return i18n("Decode the selected text from BASE64 to text.");
     } else
-    if (cmd == "b64xmltidy") {
-        return i18n("Decode the selected text from BASE64 to text.");
+    if (cmd == 'b64xmltidy') {
+        return i18n("Separates text by XML tags.");
     } else
-    if (cmd == "b64wrap80") {
-        return i18n("Wraps test a column 80.");
+    if (cmd == 'b64wrap80') {
+        return i18n("Wraps text at column 80.");
     } 
     
 }
 
 function action(cmd)
 {
-    var a = new Object();
-   if (cmd == "b64encode") {
+   var a = new Object();
+   a.category = i18n("Base 64");
+   if (cmd == 'b64encode') {
         a.text = i18n("BASE64: Encodes to BASE64.");
         a.icon = "";
-        a.category = "";
         a.interactive = false;
         a.shortcut = "";
-    } else if (cmd == "b64decode") {
+    } else if (cmd == 'b64decode') {
         a.text = i18n("BASE64: Decodes BASE64.");
         a.icon = "";
-        a.category = "";
         a.interactive = false;
         a.shortcut = "";
-    } else if (cmd == "b64xmltidy") {
+    } else if (cmd == 'b64xmltidy') {
         a.text = i18n("XML: tidy xml with LF");
         a.icon = "";
-        a.category = "";
         a.interactive = false;
         a.shortcut = "";
-    }  else if (cmd == "b64wrap80") {
+    }  else if (cmd == 'b64wrap80') {
         a.text = i18n("BASE64: Wraps at column 80");
         a.icon = "";
-        a.category = "";
         a.interactive = false;
         a.shortcut = "";
     }

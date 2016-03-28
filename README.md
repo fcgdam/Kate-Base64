@@ -16,8 +16,9 @@
 2) How to install:
 
   Just copy the b64functions.js script to the Kate scripts directory (the path is valid for Plasma 5)
-
-    sudo cp b64functions.js /usr/share/apps/katepart/script/commands
+ 
+    sudo mkdir -p /usr/share/katepart5/script/commands
+    sudo cp b64functions.js /usr/share/katepart5/script/commands
 
   and restart Kate, or using Kate command line (Press F7) execute the command **reload-scripts**
   
@@ -35,10 +36,14 @@
 
 4) How to use it:
 
-  This was tested with Kate 15.08.3 running on Plasma 5.4.
+  This was tested with Kate 15.12.3 running on Plasma 5.6. The Katepart4 was not installed.
 
   To use just go to Tools->Scripts->Editing and the new available functions should appear.
 
   Also if pressing F7 key to access Kate command line and writing **b64** should show the available functions. see attached screenshot.
 
   If text is select then the above functions are only applied on the selected text, otherwise all document content is processed.
+
+5) Further info:
+
+  Developing info is on this URL (hard to find...): https://docs.kde.org/trunk5/en/applications/katepart/dev-scripting.html

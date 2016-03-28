@@ -2,6 +2,7 @@
 
  Just copy the script to the Kate Scripts directory with the following command:
 
- sudo cp b64functions.js /usr/share/apps/katepart/script/commands
+ sudo cp b64functions.js /usr/share/katepart5/script/commands
 
+ It is possible that the directory needs to be created.
 
